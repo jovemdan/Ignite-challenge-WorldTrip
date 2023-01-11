@@ -10,7 +10,6 @@ export function IconsInfo() {
         margin='0 auto'
         gap={['8', '10', '10', '36']}
         pt={['12', '20', '10', '10', '24']}
-        // flexDirection={['column', 'row', 'row', 'row']}
       >
         <Box>
           <Image
