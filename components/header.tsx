@@ -4,8 +4,8 @@ export function Header() {
   return (
     <>
       <Box as='header' w='100%' h='20'>
-        <Center pt='27'>
-          <Image src='/Logo.png' alt='logo' />
+        <Center pt={['6', '6', '27']}>
+          <Image h={['30', '30', '45']} src='/Logo.png' alt='logo' />
         </Center>
       </Box>
     </>
