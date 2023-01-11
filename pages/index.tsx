@@ -15,18 +15,11 @@ import { IconsInfo } from '../components/icons-info'
 export default function Home() {
   return (
     <>
-      <Header />
+      <Box>
+        <Header />
 
-      <Box
-        mt='27'
-        backgroundImage='/Background.png'
-        bgRepeat='no-repeat'
-        backgroundSize='100% auto'
-        h={['163px', '335px']}
-      >
         <Banner />
         <IconsInfo />
-
         <ChooseContinentText />
       </Box>
     </>
