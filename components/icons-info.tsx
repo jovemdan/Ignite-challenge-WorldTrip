@@ -8,7 +8,7 @@ export function IconsInfo() {
         justifyContent='center'
         alignItems='center'
         margin='0 auto'
-        gap={['8', '10', '10', '36']}
+        gap={['3', '8', '10', '10', '36']}
         pt={['12', '20', '10', '10', '24']}
       >
         <Box>
@@ -18,7 +18,7 @@ export function IconsInfo() {
             alt='cocktail'
           />
           <Text
-            fontSize={['10', '12', '14', '16']}
+            fontSize={['8', '10', '12', '14', '16']}
             pt='2'
             textAlign='center'
             color='gray.600'
@@ -30,7 +30,7 @@ export function IconsInfo() {
         <Box>
           <Image h={['5', '12', '50', '85']} src='/svgs/surf.svg' alt='surf' />
           <Text
-            fontSize={['10', '12', '14', '16']}
+            fontSize={['8', '10', '12', '14', '16']}
             pt='2'
             textAlign='center'
             color='gray.600'
@@ -46,7 +46,7 @@ export function IconsInfo() {
             alt='building'
           />
           <Text
-            fontSize={['10', '12', '14', '16']}
+            fontSize={['8', '10', '12', '14', '16']}
             pt='2'
             textAlign='center'
             color='gray.600'
@@ -62,7 +62,7 @@ export function IconsInfo() {
             alt='museum'
           />
           <Text
-            fontSize={['10', '12', '14', '16']}
+            fontSize={['8', '10', '12', '14', '16']}
             pt='2'
             textAlign='center'
             color='gray.600'
@@ -79,7 +79,7 @@ export function IconsInfo() {
           />
           <Text
             pt='2'
-            fontSize={['10', '12', '14', '16']}
+            fontSize={['8', '10', '12', '14', '16']}
             textAlign='center'
             color='gray.600'
             fontWeight='bold'
