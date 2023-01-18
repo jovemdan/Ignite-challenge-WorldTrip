@@ -1,4 +1,4 @@
-import { Box, Text, StyleProps, Flex } from '@chakra-ui/react'
+import { Box, Text, StyleProps, Flex, Image } from '@chakra-ui/react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { Header } from '../components/header'
@@ -25,7 +25,7 @@ export default function Continent({ selectedContinent }: ContinentProps) {
     <>
       <Header />
 
-      <Box as='main'>
+      <Box as='main' bgColor='#F5F8FA'>
         <Box
           bgImage={selectedContinent.bgImage}
           bgSize='cover'
@@ -72,7 +72,7 @@ export default function Continent({ selectedContinent }: ContinentProps) {
               </Text>
             </Box>
 
-            <Flex gap='42px' alignItems='center'>
+            <Flex gap='30px' alignItems='center'>
               <Box>
                 <Text
                   fontSize='48px'
@@ -117,6 +117,92 @@ export default function Continent({ selectedContinent }: ContinentProps) {
               </Box>
             </Flex>
           </Flex>
+          <Box mt='80px' fontSize='30px' fontWeight='500' lineHeight='54px'>
+            <Text color='#47585B'>Cidades +100</Text>
+            <Flex gap='30px' flexWrap='wrap' mt='40px'>
+              <Flex flexDirection='column'>
+                <Box
+                  w='250px'
+                  h='173px'
+                  borderRadius='4px 4px 0px 0px'
+                  bgSize='cover'
+                  bgRepeat='no-repeat'
+                  bgImage={selectedContinent.cities.map((c) => c.image)}
+                ></Box>
+                <Box
+                  w='250px'
+                  h='106px'
+                  bgColor='white'
+                  borderRadius='0px 0px 4px 4px'
+                ></Box>
+              </Flex>
+
+              <Flex flexDirection='column'>
+                <Box
+                  w='250px'
+                  h='173px'
+                  bgSize='cover'
+                  bgRepeat='no-repeat'
+                  bgImage={selectedContinent.cities.map((c) => c.image)}
+                  borderRadius='4px 4px 0px 0px'
+                ></Box>
+                <Box
+                  w='250px'
+                  h='106px'
+                  bgColor='white'
+                  borderRadius='0px 0px 4px 4px'
+                ></Box>
+              </Flex>
+              <Flex flexDirection='column'>
+                <Box
+                  w='250px'
+                  h='173px'
+                  bgSize='cover'
+                  bgRepeat='no-repeat'
+                  bgImage={selectedContinent.cities.map((c) => c.image)}
+                  borderRadius='4px 4px 0px 0px'
+                ></Box>
+                <Box
+                  w='250px'
+                  h='106px'
+                  bgColor='white'
+                  borderRadius='0px 0px 4px 4px'
+                ></Box>
+              </Flex>
+              <Flex flexDirection='column'>
+                <Box
+                  w='250px'
+                  h='173px'
+                  bgSize='cover'
+                  bgRepeat='no-repeat'
+                  bgImage={selectedContinent.cities.map((c) => c.image)}
+                  borderRadius='4px 4px 0px 0px'
+                ></Box>
+                <Box
+                  w='250px'
+                  h='106px'
+                  bgColor='white'
+                  borderRadius='0px 0px 4px 4px'
+                ></Box>
+              </Flex>
+              <Flex flexDirection='column'>
+                <Box
+                  w='250px'
+                  h='173px'
+                  bgSize='cover'
+                  bgRepeat='no-repeat'
+                  bgImage={selectedContinent.cities.map((c) => c.image)}
+                  borderRadius='4px 4px 0px 0px'
+                ></Box>
+                <Box
+                  w='250px'
+                  h='106px'
+                  bgColor='white'
+                  borderRadius='0px 0px 4px 4px'
+                ></Box>
+              </Flex>
+            </Flex>
+          </Box>
         </Container>
       </Box>
     </>
