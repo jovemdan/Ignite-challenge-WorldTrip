@@ -13,7 +13,13 @@ export function Header() {
           {router.pathname !== '/' && (
             <Link href='/'>
               <ChevronLeftIcon
-                style={{ cursor: 'pointer', position: 'absolute', left: 40 }}
+                style={{
+                  cursor: 'pointer',
+                  position: 'absolute',
+                  left: 40,
+                  top: 25,
+                  color: '#47585B',
+                }}
                 w={8}
                 h={8}
               />
