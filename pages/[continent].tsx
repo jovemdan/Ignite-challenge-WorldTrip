@@ -1,6 +1,7 @@
 import { Box, Text, StyleProps, Flex, Image } from '@chakra-ui/react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
+import { Cities } from '../components/cities'
 import { Header } from '../components/header'
 
 type ContinentProps = {
@@ -117,92 +118,7 @@ export default function Continent({ selectedContinent }: ContinentProps) {
               </Box>
             </Flex>
           </Flex>
-          <Box mt='80px' fontSize='30px' fontWeight='500' lineHeight='54px'>
-            <Text color='#47585B'>Cidades +100</Text>
-            <Flex gap='30px' flexWrap='wrap' mt='40px'>
-              <Flex flexDirection='column'>
-                <Box
-                  w='250px'
-                  h='173px'
-                  borderRadius='4px 4px 0px 0px'
-                  bgSize='cover'
-                  bgRepeat='no-repeat'
-                  bgImage={selectedContinent.cities.map((c) => c.image)}
-                ></Box>
-                <Box
-                  w='250px'
-                  h='106px'
-                  bgColor='white'
-                  borderRadius='0px 0px 4px 4px'
-                ></Box>
-              </Flex>
-
-              <Flex flexDirection='column'>
-                <Box
-                  w='250px'
-                  h='173px'
-                  bgSize='cover'
-                  bgRepeat='no-repeat'
-                  bgImage={selectedContinent.cities.map((c) => c.image)}
-                  borderRadius='4px 4px 0px 0px'
-                ></Box>
-                <Box
-                  w='250px'
-                  h='106px'
-                  bgColor='white'
-                  borderRadius='0px 0px 4px 4px'
-                ></Box>
-              </Flex>
-              <Flex flexDirection='column'>
-                <Box
-                  w='250px'
-                  h='173px'
-                  bgSize='cover'
-                  bgRepeat='no-repeat'
-                  bgImage={selectedContinent.cities.map((c) => c.image)}
-                  borderRadius='4px 4px 0px 0px'
-                ></Box>
-                <Box
-                  w='250px'
-                  h='106px'
-                  bgColor='white'
-                  borderRadius='0px 0px 4px 4px'
-                ></Box>
-              </Flex>
-              <Flex flexDirection='column'>
-                <Box
-                  w='250px'
-                  h='173px'
-                  bgSize='cover'
-                  bgRepeat='no-repeat'
-                  bgImage={selectedContinent.cities.map((c) => c.image)}
-                  borderRadius='4px 4px 0px 0px'
-                ></Box>
-                <Box
-                  w='250px'
-                  h='106px'
-                  bgColor='white'
-                  borderRadius='0px 0px 4px 4px'
-                ></Box>
-              </Flex>
-              <Flex flexDirection='column'>
-                <Box
-                  w='250px'
-                  h='173px'
-                  bgSize='cover'
-                  bgRepeat='no-repeat'
-                  bgImage={selectedContinent.cities.map((c) => c.image)}
-                  borderRadius='4px 4px 0px 0px'
-                ></Box>
-                <Box
-                  w='250px'
-                  h='106px'
-                  bgColor='white'
-                  borderRadius='0px 0px 4px 4px'
-                ></Box>
-              </Flex>
-            </Flex>
-          </Box>
+          <Cities bgImage={selectedContinent.cities.map((c) => c.image)} />
         </Container>
       </Box>
     </>
