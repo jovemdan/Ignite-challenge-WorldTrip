@@ -55,7 +55,11 @@ export default function Continent({ selectedContinent }: ContinentProps) {
         </Box>
 
         <Container maxW='1160px' paddingX='16px' mb='35px'>
-          <Flex justifyContent='space-between'>
+          <Flex
+            justifyContent='space-between'
+            flexDirection={['column', 'column', 'column', 'row']}
+            marginInline='16px'
+          >
             <Box maxW='600px' pt='12'>
               <Text
                 as='p'
@@ -118,7 +122,18 @@ export default function Continent({ selectedContinent }: ContinentProps) {
               </Box>
             </Flex>
           </Flex>
-          <Cities bgImage={selectedContinent.cities.map((c) => c.image)} />
+
+          <Box mt='80px' fontSize='30px' fontWeight='500' lineHeight='54px'>
+            <Text color='#47585B'>Cidades +100</Text>
+            <Flex mt='40px' flexWrap='wrap' gap='30px'>
+              {selectedContinent.cities.map((image) => (
+                <Cities
+                  key={image.name}
+                  bgImage={selectedContinent.cities.map((c) => c.image)}
+                />
+              ))}
+            </Flex>
+          </Box>
         </Container>
       </Box>
     </>
