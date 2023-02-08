@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { Cities } from '../components/cities'
 import { Header } from '../components/header'
+import { InfoContinent } from '../components/info-continent'
 
 type ContinentProps = {
   selectedContinent: {
@@ -58,15 +59,14 @@ export default function Continent({ selectedContinent }: ContinentProps) {
           <Flex
             justifyContent='space-between'
             flexDirection={['column', 'column', 'column', 'row']}
-            marginInline='16px'
           >
             <Box maxW='600px' pt='12'>
               <Text
                 as='p'
                 color='gray.600'
                 fontWeight='400'
-                lineHeight='36px'
-                fontSize='24px'
+                lineHeight={['21px', '36px']}
+                fontSize={['14px', '24px']}
                 textAlign='justify'
               >
                 A Europa é, por convenção, um dos seis continentes do mundo.
@@ -77,55 +77,26 @@ export default function Continent({ selectedContinent }: ContinentProps) {
               </Text>
             </Box>
 
-            <Flex gap='30px' alignItems='center'>
-              <Box>
-                <Text
-                  fontSize='48px'
-                  lineHeight='72px'
-                  fontWeight='600'
-                  color='#FFBA08'
-                  textAlign='center'
-                >
-                  50
-                </Text>
-                <Text fontWeight='600' color='#47585B' fontSize='24px'>
-                  países
-                </Text>
-              </Box>
-              <Box>
-                <Text
-                  fontSize='48px'
-                  lineHeight='72px'
-                  fontWeight='600'
-                  color='#FFBA08'
-                  textAlign='center'
-                >
-                  60
-                </Text>
-                <Text fontWeight='600' color='#47585B' fontSize='24px'>
-                  línguas
-                </Text>
-              </Box>
-              <Box>
-                <Text
-                  fontSize='48px'
-                  lineHeight='72px'
-                  fontWeight='600'
-                  color='#FFBA08'
-                  textAlign='center'
-                >
-                  27
-                </Text>
-                <Text fontWeight='600' color='#47585B' fontSize='24px'>
-                  cidades + 10
-                </Text>
-              </Box>
-            </Flex>
+            <InfoContinent
+              countryCount={50}
+              languagesCount={60}
+              citiesCount={27}
+            />
           </Flex>
 
-          <Box mt='80px' fontSize='30px' fontWeight='500' lineHeight='54px'>
+          <Box
+            mt={['10px', '80px']}
+            fontSize={['16px', '30px']}
+            fontWeight='500'
+            lineHeight='54px'
+          >
             <Text color='#47585B'>Cidades +100</Text>
-            <Flex mt='40px' flexWrap='wrap' gap='30px'>
+            <Flex
+              mt={['10px', '40px']}
+              flexWrap='wrap'
+              justifyContent='center'
+              gap='30px'
+            >
               {selectedContinent.cities.map((image) => (
                 <Cities
                   key={image.name}
