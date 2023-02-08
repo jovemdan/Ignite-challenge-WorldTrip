@@ -94,7 +94,7 @@ export default function Continent({ selectedContinent }: ContinentProps) {
             <Flex
               mt={['10px', '40px']}
               flexWrap='wrap'
-              justifyContent='center'
+              justifyContent={['center', 'flex-start']}
               gap='30px'
             >
               {selectedContinent.cities.map((image) => (
