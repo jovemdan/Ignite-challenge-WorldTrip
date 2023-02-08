@@ -5,16 +5,16 @@ interface Cities {
 }
 export function Cities(props: Cities) {
   return (
-    <Flex flexDirection='column'>
+    <Flex flexDirection='column' w={['256px', '250px']}>
       <Box
-        w='250px'
+        w='100%'
         h='173px'
         borderRadius='4px 4px 0px 0px'
         bgSize='cover'
         bgRepeat='no-repeat'
         bgImage={props.bgImage}
       ></Box>
-      <Box w='250px' h='106px' bgColor='white' borderRadius='0px 0px 4px 4px'>
+      <Box w='100%' h='106px' bgColor='white' borderRadius='0px 0px 4px 4px'>
         <Flex flexDirection='column' marginInline='24px' mt='18px'>
           <Flex justifyContent='space-between'>
             <Flex flexDirection='column' gap='12px'>
