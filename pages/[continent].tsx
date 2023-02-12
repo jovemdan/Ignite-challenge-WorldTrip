@@ -97,9 +97,9 @@ export default function Continent({ selectedContinent }: ContinentProps) {
               justifyContent={['center', 'flex-start']}
               gap='30px'
             >
-              {selectedContinent.cities.map((image) => (
+              {selectedContinent.cities.map((image, index) => (
                 <Cities
-                  key={image.name}
+                  key={index}
                   bgImage={selectedContinent.cities.map((c) => c.image)}
                 />
               ))}
@@ -164,29 +164,29 @@ export const getStaticProps: GetStaticProps = async (context) => {
           flag: 'https://cdn.countryflags.com/thumbs/united-kingdom/flag-800.png',
         },
         {
-          name: 'Londres',
-          country: 'Reino Unido',
+          name: 'Paris',
+          country: 'França',
           image:
             'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
           flag: 'https://cdn.countryflags.com/thumbs/united-kingdom/flag-800.png',
         },
         {
-          name: 'Londres',
-          country: 'Reino Unido',
+          name: 'Roma',
+          country: 'Itália',
           image:
             'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
           flag: 'https://cdn.countryflags.com/thumbs/united-kingdom/flag-800.png',
         },
         {
-          name: 'Londres',
-          country: 'Reino Unido',
+          name: 'Praga',
+          country: 'República Tcheca',
           image:
             'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
           flag: 'https://cdn.countryflags.com/thumbs/united-kingdom/flag-800.png',
         },
         {
-          name: 'Londres',
-          country: 'Reino Unido',
+          name: 'Amsterdã',
+          country: 'Holanda',
           image:
             'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
           flag: 'https://cdn.countryflags.com/thumbs/united-kingdom/flag-800.png',
